@@ -1,0 +1,83 @@
+﻿<Page
+    x:Class="EmotionsFromMotion.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:usrcntr="using:EmotionsFromMotion.CustomControls"
+    xmlns:local="using:EmotionsFromMotion"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.TopAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:ConnectionId='1' x:Name="buttonCreateGroup" IsEnabled="False" Label="Создать группу"                                  ></AppBarButton>
+                <AppBarButton x:ConnectionId='2' x:Name="buttonCreatePerson" IsEnabled="False" Label="Создать персонаж"                                   ></AppBarButton>
+                <AppBarButton x:ConnectionId='3' x:Name="buttonTrainGroup" IsEnabled="False" Label="Тренировать группу"                                  ></AppBarButton>
+                <AppBarButton x:ConnectionId='4' x:Name="buttonDrawChart" IsEnabled="False" Label="Построить график"                                  ></AppBarButton>
+            </CommandBar.SecondaryCommands>
+            <AppBarButton x:ConnectionId='5' Icon="OpenFile"                             ></AppBarButton>
+        </CommandBar>
+        
+    </Page.TopAppBar>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <MediaPlayerElement x:ConnectionId='15' Grid.Row="0" x:Name="media2"></MediaPlayerElement>
+                <Grid Grid.Row="1">
+                    <StackPanel Orientation="Vertical">
+                        <Slider x:ConnectionId='16'  x:Name="playSlider" VerticalAlignment="Top" FontSize="9" RequestedTheme="Light"  Margin="5"                                       />
+                        <Grid>
+                            <Button x:ConnectionId='17' x:Name="playButton" HorizontalAlignment="Center"                           >
+                                <SymbolIcon x:ConnectionId='18' x:Name="playSymbol" Symbol="Play"></SymbolIcon>
+                            </Button>
+                        </Grid>
+                        <StackPanel Orientation="Horizontal">
+                            
+                        </StackPanel>
+                    </StackPanel>
+                    
+                </Grid>
+                
+                
+            </Grid>
+            <StackPanel Grid.Row="1" Orientation="Vertical">
+                <TextBlock Grid.Row="1" Foreground="BlueViolet" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="10" TextWrapping="WrapWholeWords" TextTrimming="CharacterEllipsis" MaxLines="5"  Margin="5 0 5 0">Person Group:</TextBlock>
+                <TextBlock x:ConnectionId='12' Grid.Row="1"  x:Name="textBlockPersonGroup" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="10" TextWrapping="WrapWholeWords" TextTrimming="CharacterEllipsis" MaxLines="5"  Margin="5 0 5 0"></TextBlock>
+                <TextBlock Grid.Row="1" Foreground="BlueViolet" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="10" TextWrapping="WrapWholeWords" TextTrimming="CharacterEllipsis" MaxLines="5"  Margin="5 0 5 0">Person:</TextBlock>
+                <TextBlock x:ConnectionId='13' Grid.Row="1" x:Name="textBlockPerson" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="10" TextWrapping="WrapWholeWords" TextTrimming="CharacterEllipsis" MaxLines="5"  Margin="5 0 5 0"></TextBlock>
+                <TextBlock Grid.Row="1" Foreground="BlueViolet" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="10" TextWrapping="WrapWholeWords" TextTrimming="CharacterEllipsis" MaxLines="5"  Margin="5 0 5 0">Faces:</TextBlock>
+                <TextBlock x:ConnectionId='14' Grid.Row="1" x:Name="textBlockFaces" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="10" TextWrapping="WrapWholeWords" TextTrimming="CharacterEllipsis"   Margin="5 0 5 0"></TextBlock>
+                
+                
+            </StackPanel>
+            
+        </Grid>
+        <Grid Grid.Row="1" Background="BlueViolet">
+            <StackPanel Orientation="Horizontal">
+                <Button x:ConnectionId='10' RequestedTheme="Dark"                          Margin="5">Проанализировать эмоции</Button>
+                <Button x:ConnectionId='11' x:Name="buttonAddFace" RequestedTheme="Dark" Margin="5"                               >Добавить кадр</Button>
+                
+                
+                
+            </StackPanel>
+            
+        </Grid>
+        <usrcntr:MyChartControl x:ConnectionId='6' x:Name="myChart" Grid.RowSpan="2" Visibility="Collapsed"></usrcntr:MyChartControl>
+        <usrcntr:WaitScreenControl x:ConnectionId='7' x:Name="waitScreen" Visibility="Collapsed" Grid.RowSpan="2"></usrcntr:WaitScreenControl>
+        <usrcntr:PersonGroupForm x:ConnectionId='8' x:Name="personGroupForm" Grid.RowSpan="2" Visibility="Collapsed"></usrcntr:PersonGroupForm>
+        <usrcntr:PersonForm x:ConnectionId='9' x:Name="personForm" Grid.RowSpan="2" Visibility="Collapsed"></usrcntr:PersonForm>
+    </Grid>
+</Page>
+
