@@ -20,7 +20,7 @@
                                    IndependentValuePath="SecondsFromBegining"
                                    DependentValuePath="EmotionResult.Scores.Anger"
                                    IsSelectionEnabled="True"/>
-                <Charting:LineSeries Title="Anger"
+                <Charting:LineSeries Title="Happiness"
                                    IndependentValuePath="SecondsFromBegining"
                                    DependentValuePath="EmotionResult.Scores.Happiness"
                                    IsSelectionEnabled="True"/>

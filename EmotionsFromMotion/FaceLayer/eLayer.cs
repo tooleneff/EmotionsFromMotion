@@ -12,7 +12,7 @@ namespace EmotionsFromMotion
 {
     public class eLayer
     {
-        readonly string myKey = "113e0a44087442ca8d2543a8ac9a9da5";
+        readonly string myKey = "";
         EmotionServiceClient eClient;
         public eLayer()
         {
