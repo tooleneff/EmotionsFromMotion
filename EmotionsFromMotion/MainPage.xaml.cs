@@ -134,6 +134,7 @@ namespace EmotionsFromMotion
             filePicker.FileTypeFilter.Add(".mp4");
             filePicker.FileTypeFilter.Add(".mpg4");
             filePicker.FileTypeFilter.Add(".avi");
+            
             UpdatePersonGroupsData();
             personGroupForm.ButtonSaveTapped += PersonGroupForm_ButtonSaveTapped;
             personForm.ButtonSaveTapped += PersonForm_ButtonSaveTapped;
@@ -202,9 +203,9 @@ namespace EmotionsFromMotion
             waitScreen.Hide();
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            
+            await UpdateState();
         }
         private async void AddFace()
         {

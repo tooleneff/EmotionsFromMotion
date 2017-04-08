@@ -16,15 +16,38 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Background="White">
             <Charting:Chart x:ConnectionId='2' x:Name="LineChart" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <Charting:LineSeries Title="Anger"
+                <Charting:LineSeries x:ConnectionId='3' x:Name="series_anger" Title="Anger"
                                    IndependentValuePath="SecondsFromBegining"
                                    DependentValuePath="EmotionResult.Scores.Anger"
                                    IsSelectionEnabled="True"/>
-                <Charting:LineSeries Title="Happiness"
+                <Charting:LineSeries x:ConnectionId='4' x:Name="series_happiness" Title="Happiness"
                                    IndependentValuePath="SecondsFromBegining"
                                    DependentValuePath="EmotionResult.Scores.Happiness"
                                    IsSelectionEnabled="True"/>
-
+                <Charting:LineSeries x:ConnectionId='5' x:Name="series_contempt" Title="Contempt"
+                                   IndependentValuePath="SecondsFromBegining"
+                                   DependentValuePath="EmotionResult.Scores.Contempt"
+                                   IsSelectionEnabled="True"/>
+                <Charting:LineSeries x:ConnectionId='6' x:Name="series_disgust" Title="Disgust"
+                                   IndependentValuePath="SecondsFromBegining"
+                                   DependentValuePath="EmotionResult.Scores.Disgust"
+                                   IsSelectionEnabled="True"/>
+                <Charting:LineSeries x:ConnectionId='7' x:Name="series_fear" Title="Fear"
+                                   IndependentValuePath="SecondsFromBegining"
+                                   DependentValuePath="EmotionResult.Scores.Fear"
+                                   IsSelectionEnabled="True"/>
+                <Charting:LineSeries x:ConnectionId='8' x:Name="series_neutral" Title="Neutral"
+                                   IndependentValuePath="SecondsFromBegining"
+                                   DependentValuePath="EmotionResult.Scores.Neutral"
+                                   IsSelectionEnabled="True"/>
+                <Charting:LineSeries x:ConnectionId='9' x:Name="series_sadness" Title="Sadness"
+                                   IndependentValuePath="SecondsFromBegining"
+                                   DependentValuePath="EmotionResult.Scores.Sadness"
+                                   IsSelectionEnabled="True"/>
+                <Charting:LineSeries x:ConnectionId='10' x:Name="series_surprise" Title="Surprise"
+                                   IndependentValuePath="SecondsFromBegining"
+                                   DependentValuePath="EmotionResult.Scores.Surprise"
+                                   IsSelectionEnabled="True"/>
             </Charting:Chart>
         </Grid>
         <Grid Grid.Row="1" Background="BlueViolet" RequestedTheme="Dark" >

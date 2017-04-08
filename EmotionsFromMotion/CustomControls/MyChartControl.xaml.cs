@@ -20,6 +20,13 @@ namespace EmotionsFromMotion.CustomControls
         {
             (LineChart.Series[0] as LineSeries).ItemsSource = itemSource;
             (LineChart.Series[1] as LineSeries).ItemsSource = itemSource;
+            (LineChart.Series[2] as LineSeries).ItemsSource = itemSource;
+            (LineChart.Series[3] as LineSeries).ItemsSource = itemSource;
+            (LineChart.Series[4] as LineSeries).ItemsSource = itemSource;
+            (LineChart.Series[5] as LineSeries).ItemsSource = itemSource;
+            (LineChart.Series[6] as LineSeries).ItemsSource = itemSource;
+            (LineChart.Series[7] as LineSeries).ItemsSource = itemSource;
+
             this.Visibility = Visibility.Visible;
         }
 

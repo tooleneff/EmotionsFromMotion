@@ -11,7 +11,7 @@ namespace EmotionsFromMotion
 {
     public class fLayer:IDisposable
     {
-        readonly string myKey = "";
+        readonly string myKey = "5a6d995e43894151bac9ed1b03decd53";
         FaceServiceClient fClient;
         public fLayer()
         {
